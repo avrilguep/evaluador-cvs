@@ -1,0 +1,216 @@
+.main {
+  font-family: Arial, Helvetica, sans-serif;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-start; 
+  padding: 2rem 1.5rem;
+  position: relative;
+}
+
+.subtitle {
+  position: relative;
+  z-index: 1;
+  font-size: 1.15rem;
+  font-weight: 600;
+  color: #6b7280;
+  letter-spacing: 0.05em;
+  text-align: center;
+  width: 100%;
+  margin-bottom: 2rem;
+  margin-top: 1rem; 
+
+  animation: subtitleAnima 0.6s ease-out forwards;
+  animation-delay: 0.5s;
+  opacity: 0;
+}
+
+@keyframes subtitleAnima {
+  from {
+    opacity: 0;
+    transform: translateX(-40px);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+.layout {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: center;
+  width: 100%;
+  position: relative;
+  z-index: 1;
+  flex: 1;
+  padding-left: 0rem; 
+  margin-bottom: 4rem;
+}
+
+@media (min-width: 768px) {
+  .layout {
+    flex-direction: row;
+    align-items: center;
+    justify-content: flex-start;
+    padding-left: 8rem; 
+  }
+}
+
+.leftCol {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100%;
+  max-width: 28rem;
+}
+
+.welcome {
+  color: #0b2953;
+  font-weight: 900;
+  letter-spacing: 0.2em;
+  font-size: 1.25rem;
+  margin-bottom: 1.5rem;
+  align-self: flex-start;
+  padding-left: 8rem;
+
+  animation: welcomeAnima 0.6s ease-out forwards;
+  animation-delay: 1.2s;
+  opacity: 0;
+}
+
+@keyframes welcomeAnima {
+  from {
+    opacity: 0;
+    transform: translateY(-16px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* ── Card ── */
+.card {
+  width: 100%;
+  max-width: 28rem;
+  border-radius: 1rem;
+  padding: 2.5rem;
+  display: flex;
+  flex-direction: column;
+  gap: 1.25rem;
+  background: #0b295397;
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.18);
+}
+
+
+/* ── Formulario ── */
+.form {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.label {
+  color: white;
+  font-size: 1rem;
+  font-weight: 500;
+  justify-content: center;
+  display: flex;
+  font-weight: 700;
+}
+
+.inputWrapper {
+  position: relative;
+}
+
+.input {
+  width: 100%;
+  border-radius: 0.5rem;
+  padding: 0.75rem 2.5rem 0.75rem 1rem;
+  font-size: 0.875rem;
+  outline: none;
+  letter-spacing: 0.2em;
+  color: #ffffff;
+  background: #0b2953a7;
+  border: none;
+  box-sizing: border-box;
+}
+
+.input::placeholder {
+  color: #94a3b8;
+  letter-spacing: 0.1em;
+}
+
+.eyeBtn {
+  position: absolute;
+  right: 0.75rem;
+  top: 50%;
+  transform: translateY(-50%);
+  background: none;
+  border: none;
+  cursor: pointer;
+  color: #ffffff;
+  display: flex;
+  align-items: center;
+  padding: 0;
+}
+
+.eyeBtn:hover {
+  color: #a9a9a9;
+}
+
+.error {
+  font-size: 0.75rem;
+  color: #fecaca;
+  background: rgba(239, 68, 68, 0.3);
+  padding: 0.5rem 0.75rem;
+  border-radius: 0.5rem;
+  text-align: center;
+}
+
+.submitBtn {
+  width: 100%;
+  padding: 0.75rem;
+  border-radius: 0.5rem;
+  font-size: 0.875rem;
+  font-weight: 600;
+  color: white;
+  border: none;
+  cursor: pointer;
+  background: #10b981;
+  transition: 0.5s;
+}
+
+.submitBtn:hover {
+  opacity: 0.9;
+  background: #03c64a;
+  box-shadow: 0 4px 14px rgba(3, 198, 74, 0.4);
+}
+
+.submitBtn:disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
+}
+
+/* ── Logo derecho ── */
+.logoSide {
+  display: none;
+}
+
+@media (min-width: 768px) {
+  .logoSide {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 0.75rem;
+  }
+}
+
+.logo {
+  width: 12rem;
+}

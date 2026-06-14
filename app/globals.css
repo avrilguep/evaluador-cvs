@@ -122,9 +122,22 @@
     @apply border-border outline-ring/50;
   }
   body {
-    @apply bg-background text-foreground;
+    @apply text-foreground;  /* ← quita bg-background, deja solo text-foreground */
   }
   html {
     @apply font-sans;
   }
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+main {
+  animation: fadeIn 2s ease-out forwards;
 }
